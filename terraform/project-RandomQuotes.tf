@@ -29,8 +29,9 @@ resource "octopusdeploy_project" "randomQuotesProject" {
   }
 
   git_persistence_settings {
-    url            = "https://github.com/coryreid/RandomQuotes_CaC"
-    default_branch = "main"
+    url            = "https://github.com/OctopusSamples/RandomQuotes"
+    default_branch = "config-as-code-walkthrough"
+    base_path = ".octopus/Random Quotes - Config As Code"
     credentials {
       username = var.gitUserName
       password = var.gitAccessToken
